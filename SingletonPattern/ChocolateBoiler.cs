@@ -2,25 +2,12 @@
 
 public class ChocolateBoiler
 {
+    public static ChocolateBoiler Instance { get; } = new();
+
     private bool _empty = true;
     private bool _boiled = false;
 
-    private static object objectLock = new();
-    private static ChocolateBoiler? _uniqueInstance;
-
-    private ChocolateBoiler()
-    {
-        
-    }
-
-    public static ChocolateBoiler GetInstance()
-    {
-        lock (objectLock)
-        {
-            _uniqueInstance = new ChocolateBoiler();
-            return _uniqueInstance;
-        }
-    }
+    private ChocolateBoiler(){}
 
     public void Fill()
     {
