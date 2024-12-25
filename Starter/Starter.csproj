@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CommandPattern\CommandPattern.csproj" />
       <ProjectReference Include="..\DecoratorPattern\DecoratorPattern.csproj" />
       <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
       <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj" />
