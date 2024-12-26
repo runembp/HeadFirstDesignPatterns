@@ -1,21 +1,102 @@
-﻿using CommandPattern.Classes;
+﻿using AdapterPattern.Adapters;
+using AdapterPattern.Classes;
+using CommandPattern.Classes;
 using CommandPattern.Commands;
-using CommandPattern.Interfaces;
 using DecoratorPattern.Abstractions;
 using DecoratorPattern.Classes;
 using DecoratorPattern.Classes.Beverages;
 using DecoratorPattern.Classes.Condiments;
+using FacadePattern.Classes;
 using FactoryPattern.Stores;
 using ObserverPattern.Classes;
-using StrategyPattern.Behaviors;
-using StrategyPattern.Classes;
+using TemplateMethodPattern.Classes;
+using MallardDuck = AdapterPattern.Classes.MallardDuck;
 
 // StrategyPattern();
 // ObserverPattern();
 // DecoratorPattern();
 // FactoryPattern();
-CommandPattern();
+// CommandPattern();
+// AdapterPattern();
+// FacadePattern();
+TemplateMethodPattern();
 return;
+
+void TemplateMethodPattern()
+{
+    var tea = new Tea();
+    tea.PrepareRecipe();
+
+    var coffee = new Coffee();
+    coffee.PrepareRecipe();
+
+    var ducks = new List<Duck>
+    {
+        new("Daffy", 8),
+        new("Dewey", 2),
+        new("Howard", 7),
+        new("Louie", 2),
+        new("Donald", 10),
+        new("Huey", 2)
+    };
+
+    Console.WriteLine("Before sorting");
+    Display(ducks);
+
+    ducks.Sort();
+
+    Console.WriteLine("\nAfter sorting");
+    Display(ducks);
+    return;
+
+    void Display(List<Duck> ducks)
+    {
+        foreach (var duck in ducks)
+        {
+            Console.WriteLine(duck);
+        }
+    }
+}
+
+void FacadePattern()
+{
+    var amp = new Amplifier();
+    var popper = new PopcornPopper();
+    var projector = new Projector();
+    var screen = new Screen();
+    var player = new StreamingPlayer();
+    var lights = new TheaterLights();
+    var tuner = new Tuner();
+
+    var homeTheater = new HomeTheaterFacade(amp, tuner, player, projector, lights, screen, popper);
+    homeTheater.WatchMovie("Snoop");
+    homeTheater.EndMovie();
+}
+
+void AdapterPattern()
+{
+    // var mallardDuck = new MallardDuck();
+    // var turkey = new WildTurkey();
+    // var turkeyAdapter = new TurkeyAdapter(turkey);
+    //
+    // Console.WriteLine("The Turkey says:");
+    // turkey.Gobble();
+    // turkey.Fly();
+    //
+    // Console.WriteLine("The duck says:");
+    // TestDuck(mallardDuck);
+    //
+    // Console.WriteLine("The Turkey Adapter says");
+    // TestDuck(turkeyAdapter);
+    //
+    // return;
+    //
+    // void TestDuck(Duck duck)
+    // {
+    //     duck.Quack();
+    //     duck.Fly();
+    // }
+}
 
 void CommandPattern()
 {
@@ -26,22 +107,22 @@ void CommandPattern()
     var ceilingFan = new Fan("Living Room");
     var garageDoor = new GarageDoor("Garage");
     var stereo = new Stereo("Living Room");
-    
+
     // remote.SetCommand(0, () => livingRoomLight.On(), () => livingRoomLight.Off());
 
     var lightOnCommand = new LightOnCommand(livingRoomLight);
     var stereoOnCommand = new StereoOnWithCDCommand(stereo);
     var fanHighCommand = new FanHighCommand(ceilingFan);
-    
+
     var lightOffCommand = new LightOffCommand(livingRoomLight);
     var stereoOffCommand = new StereoOffWithCDCommand(stereo);
     var fanOffCommand = new FanOffCommand(ceilingFan);
     var partyOn = new MacroCommand([lightOnCommand, stereoOnCommand, fanHighCommand]);
     var partyOff = new MacroCommand([lightOffCommand, stereoOffCommand, fanOffCommand]);
-    
+
     remote.SetCommand(0, lightOnCommand, lightOffCommand);
     remote.SetCommand(1, partyOn, partyOff);
-    
+
     remote.OnButtonWasPushed(0);
     remote.UndoButtonWasPushed();
 }
@@ -91,14 +172,14 @@ void ObserverPattern()
 
 void StrategyPattern()
 {
-    var mallardDuck = new MallardDuck();
-    mallardDuck.Display();
-    mallardDuck.PerformFly();
-    mallardDuck.PerformQuack();
-
-    var modelDuck = new ModelDuck();
-    modelDuck.Display();
-    modelDuck.PerformFly();
-    modelDuck.SetFlyBehavior(new FlyRocketPowered());
-    modelDuck.PerformFly();
+    //     var mallardDuck = new MallardDuck();
+    //     mallardDuck.Display();
+    //     mallardDuck.PerformFly();
+    //     mallardDuck.PerformQuack();
+    //
+    //     var modelDuck = new ModelDuck();
+    //     modelDuck.Display();
+    //     modelDuck.PerformFly();
+    //     modelDuck.SetFlyBehavior(new FlyRocketPowered());
+    //     modelDuck.PerformFly();v
 }
