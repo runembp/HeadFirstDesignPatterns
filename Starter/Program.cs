@@ -1,7 +1,8 @@
-﻿using AdapterPattern.Adapters;
-using AdapterPattern.Classes;
+﻿using System.ComponentModel;
 using CommandPattern.Classes;
 using CommandPattern.Commands;
+using CompositePattern.Abstractions;
+using CompositePattern.Classes;
 using DecoratorPattern.Abstractions;
 using DecoratorPattern.Classes;
 using DecoratorPattern.Classes.Beverages;
@@ -10,7 +11,6 @@ using FacadePattern.Classes;
 using FactoryPattern.Stores;
 using ObserverPattern.Classes;
 using TemplateMethodPattern.Classes;
-using MallardDuck = AdapterPattern.Classes.MallardDuck;
 
 // StrategyPattern();
 // ObserverPattern();
@@ -19,8 +19,49 @@ using MallardDuck = AdapterPattern.Classes.MallardDuck;
 // CommandPattern();
 // AdapterPattern();
 // FacadePattern();
-TemplateMethodPattern();
+// TemplateMethodPattern();
+// IteratorPattern();
+CompositePattern();
+
 return;
+
+void CompositePattern()
+{
+    MenuComponent panCakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
+    MenuComponent dinerMenu = new Menu("DINER MENU", "Lunch");
+    MenuComponent cafeMenu = new Menu("CAFE MENU", "Dinner");
+    MenuComponent dessertMenu = new Menu("DESSERT MENU", "Dessert of course!");
+    MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined");
+    
+    dinerMenu.Add(new MenuItem(
+        "Pasta",
+        "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
+        true, 
+        3.89));
+    
+    dessertMenu.Add(new MenuItem(
+        "Apple Pie",
+        "Apple pie with a flakey crust, topped with vanilla ice cream",
+        true,
+        1.59));
+    
+    allMenus.Add(panCakeHouseMenu);
+    allMenus.Add(dinerMenu);
+    allMenus.Add(cafeMenu);
+    dinerMenu.Add(dessertMenu);
+
+    var waitress = new Waitress(allMenus);
+    waitress.PrintMenu();
+}
+
+void IteratorPattern()
+{
+    // var pancakeHouseMenu = new PanCakeHouseMenu();
+    // var dinerMenu = new DinerMenu();
+    // var cafeMenu = new CafeMenu();
+    // var waitress = new Waitress([pancakeHouseMenu, dinerMenu, cafeMenu]);
+    // waitress.PrintMenu();
+}
 
 void TemplateMethodPattern()
 {

@@ -20,7 +20,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern", "FacadePatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodPattern", "TemplateMethodPattern\TemplateMethodPattern.csproj", "{04F275D9-13BB-4D80-BE60-9D4098F9FF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{697A0DD0-9E9F-4C56-9219-FBA9627EC48C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorPattern", "IteratorPattern\IteratorPattern.csproj", "{697A0DD0-9E9F-4C56-9219-FBA9627EC48C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{207D1D18-CE3E-4415-B470-6B978648239F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +74,9 @@ Global
 		{697A0DD0-9E9F-4C56-9219-FBA9627EC48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{697A0DD0-9E9F-4C56-9219-FBA9627EC48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{697A0DD0-9E9F-4C56-9219-FBA9627EC48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{207D1D18-CE3E-4415-B470-6B978648239F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207D1D18-CE3E-4415-B470-6B978648239F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207D1D18-CE3E-4415-B470-6B978648239F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207D1D18-CE3E-4415-B470-6B978648239F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
