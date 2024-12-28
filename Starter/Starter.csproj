@@ -15,6 +15,7 @@
       <ProjectReference Include="..\FacadePattern\FacadePattern.csproj" />
       <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
       <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj" />
+      <ProjectReference Include="..\StatePattern\StatePattern.csproj" />
       <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
       <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
       <ProjectReference Include="..\CompositePattern\CompositePattern.csproj" />

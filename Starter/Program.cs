@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using CommandPattern.Classes;
+﻿using CommandPattern.Classes;
 using CommandPattern.Commands;
 using CompositePattern.Abstractions;
 using CompositePattern.Classes;
@@ -10,6 +9,7 @@ using DecoratorPattern.Classes.Condiments;
 using FacadePattern.Classes;
 using FactoryPattern.Stores;
 using ObserverPattern.Classes;
+using StatePattern;
 using TemplateMethodPattern.Classes;
 
 // StrategyPattern();
@@ -21,9 +21,27 @@ using TemplateMethodPattern.Classes;
 // FacadePattern();
 // TemplateMethodPattern();
 // IteratorPattern();
-CompositePattern();
-
+// CompositePattern();
+StatePattern();
 return;
+
+void StatePattern()
+{
+    var gumballMachine = new GumBallMachine(1);
+    Console.WriteLine(gumballMachine);
+    
+    gumballMachine.InsertQuarter();
+    gumballMachine.TurnCrank();
+    Console.WriteLine(gumballMachine);
+    
+    gumballMachine.InsertQuarter();
+    gumballMachine.TurnCrank();
+    Console.WriteLine(gumballMachine);
+
+    gumballMachine.InsertQuarter();
+    gumballMachine.TurnCrank();
+    Console.WriteLine(gumballMachine);
+}
 
 void CompositePattern()
 {
@@ -32,19 +50,19 @@ void CompositePattern()
     MenuComponent cafeMenu = new Menu("CAFE MENU", "Dinner");
     MenuComponent dessertMenu = new Menu("DESSERT MENU", "Dessert of course!");
     MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined");
-    
+
     dinerMenu.Add(new MenuItem(
         "Pasta",
         "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
-        true, 
+        true,
         3.89));
-    
+
     dessertMenu.Add(new MenuItem(
         "Apple Pie",
         "Apple pie with a flakey crust, topped with vanilla ice cream",
         true,
         1.59));
-    
+
     allMenus.Add(panCakeHouseMenu);
     allMenus.Add(dinerMenu);
     allMenus.Add(cafeMenu);
