@@ -10,6 +10,7 @@ using FacadePattern.Classes;
 using FactoryPattern.Stores;
 using ObserverPattern.Classes;
 using StatePattern;
+using StatePattern.Classes;
 using TemplateMethodPattern.Classes;
 
 // StrategyPattern();
@@ -22,12 +23,25 @@ using TemplateMethodPattern.Classes;
 // TemplateMethodPattern();
 // IteratorPattern();
 // CompositePattern();
-StatePattern();
+// StatePattern();
+ProxyPattern();
 return;
+
+void ProxyPattern()
+{
+    const int count = 112;
+    const string location = "Austin";
+
+    var gumballMachine = new GumBallMachine(112, location);
+    var gumballMonitor = new GumballMonitor(gumballMachine);
+    
+    gumballMonitor.Report();
+}
+
 
 void StatePattern()
 {
-    var gumballMachine = new GumBallMachine(1);
+    var gumballMachine = new GumBallMachine(1, "");
     Console.WriteLine(gumballMachine);
     
     gumballMachine.InsertQuarter();

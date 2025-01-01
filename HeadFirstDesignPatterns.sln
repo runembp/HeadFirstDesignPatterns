@@ -26,6 +26,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "Composi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePattern\StatePattern.csproj", "{8BDAE98A-4D1B-4F8C-8E57-ABF2D2F98ECB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProxyPattern", "ProxyPattern", "{C20A2596-ECC5-4906-B1C9-D3A6132FDB89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyGreeterService", "ProxyGreeterService\ProxyGreeterService.csproj", "{8A052E4D-87A4-4292-8C84-0F9826BC1081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +90,17 @@ Global
 		{8BDAE98A-4D1B-4F8C-8E57-ABF2D2F98ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BDAE98A-4D1B-4F8C-8E57-ABF2D2F98ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BDAE98A-4D1B-4F8C-8E57-ABF2D2F98ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A052E4D-87A4-4292-8C84-0F9826BC1081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A052E4D-87A4-4292-8C84-0F9826BC1081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A052E4D-87A4-4292-8C84-0F9826BC1081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A052E4D-87A4-4292-8C84-0F9826BC1081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A052E4D-87A4-4292-8C84-0F9826BC1081} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
+		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
 	EndGlobalSection
 EndGlobal

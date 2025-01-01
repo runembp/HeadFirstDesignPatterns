@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "ProxyGreeterService";
+
+package gumballRemote;
+
+service gumballRemote {
+  rpc GetCount (CountRequest) returns (CountReply);
+  rpc GetLocation (LocationRequest) returns (LocationReply);
+  rpc GetState (StateRequest) returns (StateReply);
+}
+
+message CountRequest {}
+
+message CountReply {
+  int32 message = 1;
+}
+
+message LocationRequest {}
+
+message LocationReply {
+  string message = 1;
+}
+
+message StateRequest {}
+
+message StateReply {
+  string message = 1;
+}

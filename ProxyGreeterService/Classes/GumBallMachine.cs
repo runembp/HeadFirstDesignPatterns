@@ -1,22 +1,25 @@
-﻿using StatePattern.Classes;
-using StatePattern.Interfaces;
+﻿using ProxyGreeterService.Interfaces;
 
-namespace StatePattern;
+namespace ProxyGreeterService.Classes;
 
-public class GumBallMachine
+[Serializable]
+public class GumBallMachine : IGumballMachineRemote
 {
+    private const long SerialVersionUID = 2L;
     public readonly State SoldOutState;
     public readonly State NoQuarterState;
     public readonly State HasQuarterState;
     public readonly State SoldState;
     public readonly State WinnerState;
-
+    public readonly string Location;
     public State State;
     public int Count;
 
-    public GumBallMachine(int count)
+    public GumBallMachine(int count, string location)
     {
         Count = count;
+        Location = location;
+        
         SoldOutState = new SoldOutState(this);
         NoQuarterState = new NoQuarterState(this);
         HasQuarterState = new HasQuarterState(this);
@@ -47,15 +50,10 @@ public class GumBallMachine
         State.Refill();
     }
 
-    public void Refill(int refillCount)
+    private void Refill(int refillCount)
     {
         Count += refillCount;
         Console.WriteLine($"The gumball machine has just refilled: the new count is {Count}");
-    }
-
-    public void EjectQuarter()
-    {
-        State.EjectQuarter();
     }
 
     public void ReleaseBall()
@@ -71,5 +69,20 @@ public class GumBallMachine
     public override string ToString()
     {
         return $"Gumball Machine! {Count}";
+    }
+
+    public int GetCount()
+    {
+        return Count;
+    }
+
+    public string GetLocation()
+    {
+        return Location;
+    }
+
+    public State GetState()
+    {
+        return State;
     }
 }

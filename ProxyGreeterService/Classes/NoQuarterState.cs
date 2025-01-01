@@ -1,9 +1,11 @@
-﻿using StatePattern.Interfaces;
+﻿using ProxyGreeterService.Interfaces;
 
-namespace StatePattern.Classes;
+namespace ProxyGreeterService.Classes;
 
 public class NoQuarterState(GumBallMachine gumBallMachine) : State
 {
+    private const long SerialVersionUID = 2L;
+    
     public void InsertQuarter()
     {
         Console.WriteLine("You inserted a quarter");
