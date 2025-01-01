@@ -32,6 +32,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProxyGumballMachineSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProxyPattern", "RemoteProxyPattern\RemoteProxyPattern.csproj", "{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualProxyImageProxy", "VirtualProxyImageProxy\VirtualProxyImageProxy.csproj", "{F3317ECF-6164-4B92-9BAB-772B695F66A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectionProxy", "ProtectionProxy\ProtectionProxy.csproj", "{D54D8A31-8C13-49E3-806A-2C9B45300B33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,9 +102,19 @@ Global
 		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3317ECF-6164-4B92-9BAB-772B695F66A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3317ECF-6164-4B92-9BAB-772B695F66A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3317ECF-6164-4B92-9BAB-772B695F66A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3317ECF-6164-4B92-9BAB-772B695F66A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54D8A31-8C13-49E3-806A-2C9B45300B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54D8A31-8C13-49E3-806A-2C9B45300B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54D8A31-8C13-49E3-806A-2C9B45300B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54D8A31-8C13-49E3-806A-2C9B45300B33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8A052E4D-87A4-4292-8C84-0F9826BC1081} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
 		{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
+		{F3317ECF-6164-4B92-9BAB-772B695F66A1} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
+		{D54D8A31-8C13-49E3-806A-2C9B45300B33} = {C20A2596-ECC5-4906-B1C9-D3A6132FDB89}
 	EndGlobalSection
 EndGlobal
