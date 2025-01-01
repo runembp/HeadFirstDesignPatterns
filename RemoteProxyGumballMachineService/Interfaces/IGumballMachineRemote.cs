@@ -1,4 +1,4 @@
-﻿namespace ProxyGreeterService.Interfaces;
+﻿namespace RemoteProxyGumballMachineService.Interfaces;
 
 public interface IGumballMachineRemote
 {

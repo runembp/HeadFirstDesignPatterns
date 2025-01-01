@@ -1,5 +1,5 @@
 ﻿using Grpc.Net.Client;
-using ProxyGreeterService;
+using RemoteProxyGumballMachineService;
 
 namespace ProxyPattern.Proxies.RemoteProxy;
 

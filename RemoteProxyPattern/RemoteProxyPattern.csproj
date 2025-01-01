@@ -5,10 +5,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>ProxyPattern</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ProxyGreeterService\ProxyGreeterService.csproj" />
+      <ProjectReference Include="..\RemoteProxyGumballMachineService\RemoteProxyGumballMachineService.csproj" />
     </ItemGroup>
     
     <ItemGroup>

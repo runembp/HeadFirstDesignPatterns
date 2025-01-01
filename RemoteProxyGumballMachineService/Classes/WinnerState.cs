@@ -1,8 +1,8 @@
-﻿using ProxyGreeterService.Interfaces;
+﻿using RemoteProxyGumballMachineService.Interfaces;
 
-namespace ProxyGreeterService.Classes;
+namespace RemoteProxyGumballMachineService.Classes;
 
-public class SoldState(GumBallMachine gumBallMachine) : State
+public class WinnerState(GumBallMachine gumBallMachine) : State
 {
     private const long SerialVersionUID = 2L;
 
@@ -24,10 +24,19 @@ public class SoldState(GumBallMachine gumBallMachine) : State
     public void Dispense()
     {
         gumBallMachine.ReleaseBall();
-        
+
         if (gumBallMachine.Count == 0)
         {
-            Console.WriteLine("Oops, out of gumballs!");
+            gumBallMachine.State = gumBallMachine.SoldState;
+            return;
+        }
+        
+        gumBallMachine.ReleaseBall();
+        Console.WriteLine("YOU'RE A WINNER! You got two gumballs for your quarter");
+
+        if (gumBallMachine.Count == 0)
+        {
+            Console.WriteLine("Ooops out of gumballs");
             gumBallMachine.State = gumBallMachine.SoldOutState;
             return;
         }

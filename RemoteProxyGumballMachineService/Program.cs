@@ -1,4 +1,4 @@
-using ProxyGreeterService.Services;
+using RemoteProxyGumballMachineService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddGrpc();

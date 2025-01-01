@@ -1,6 +1,6 @@
-﻿using ProxyGreeterService.Interfaces;
+﻿using RemoteProxyGumballMachineService.Interfaces;
 
-namespace ProxyGreeterService.Classes;
+namespace RemoteProxyGumballMachineService.Classes;
 
 public class HasQuarterState(GumBallMachine gumBallMachine) : State
 {

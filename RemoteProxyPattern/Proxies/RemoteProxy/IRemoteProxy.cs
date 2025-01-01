@@ -1,4 +1,4 @@
-﻿using ProxyGreeterService;
+﻿using RemoteProxyGumballMachineService;
 
 namespace ProxyPattern.Proxies.RemoteProxy;
 

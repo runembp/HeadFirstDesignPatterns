@@ -1,6 +1,6 @@
-﻿using ProxyGreeterService.Interfaces;
+﻿using RemoteProxyGumballMachineService.Interfaces;
 
-namespace ProxyGreeterService.Classes;
+namespace RemoteProxyGumballMachineService.Classes;
 
 [Serializable]
 public class GumBallMachine : IGumballMachineRemote

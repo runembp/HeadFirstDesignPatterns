@@ -1,4 +1,4 @@
-﻿namespace ProxyGreeterService.Classes;
+﻿namespace RemoteProxyGumballMachineService.Classes;
 
 public class GumballMonitor(GumBallMachine gumBallMachine)
 {

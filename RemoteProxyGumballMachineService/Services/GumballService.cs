@@ -1,7 +1,7 @@
 using Grpc.Core;
-using ProxyGreeterService.Classes;
+using RemoteProxyGumballMachineService.Classes;
 
-namespace ProxyGreeterService.Services;
+namespace RemoteProxyGumballMachineService.Services;
 
 public class GumballService(ILogger<GumballService> logger) : gumballRemote.gumballRemoteBase
 {

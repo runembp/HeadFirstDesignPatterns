@@ -1,6 +1,6 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "ProxyGreeterService";
+option csharp_namespace = "RemoteProxyGumballMachineService";
 
 package gumballRemote;
 

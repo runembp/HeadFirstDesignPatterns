@@ -28,9 +28,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePatter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProxyPattern", "ProxyPattern", "{C20A2596-ECC5-4906-B1C9-D3A6132FDB89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyGreeterService", "ProxyGreeterService\ProxyGreeterService.csproj", "{8A052E4D-87A4-4292-8C84-0F9826BC1081}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProxyGumballMachineService", "RemoteProxyGumballMachineService\RemoteProxyGumballMachineService.csproj", "{8A052E4D-87A4-4292-8C84-0F9826BC1081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteProxyPattern", "RemoteProxyPattern\RemoteProxyPattern.csproj", "{2862DBF9-62EC-45EC-BA7E-983AF9CAF2F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
